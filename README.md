@@ -78,7 +78,7 @@ generator  ─────▶│  + BCE/Dice loss        │        │  + fine-
 
 ```
 .
-├── CV_Portfolio_Project.ipynb   # Main notebook (Part 1: U-Net, Part 2: YOLOv8)
+├── unet_yolov8_pipeline.ipynb   # Main notebook (Part 1: U-Net, Part 2: YOLOv8)
 ├── README.md                    # This file
 └── requirements.txt             # Pinned/minimum dependency versions
 ```
@@ -88,8 +88,8 @@ generator  ─────▶│  + BCE/Dice loss        │        │  + fine-
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/ssargsyann/unet-yolov8-cv.git
+cd unet-yolov8-cv
 ```
 
 ### 2. Create a virtual environment (recommended)
@@ -110,7 +110,7 @@ pip install torch torchvision ultralytics opencv-python matplotlib numpy pandas 
 ### 4. Launch Jupyter
 
 ```bash
-jupyter notebook CV_Portfolio_Project.ipynb
+jupyter notebook unet_yolov8_pipeline.ipynb
 ```
 
 ### 5. Run all cells
@@ -122,6 +122,3 @@ Run cells top to bottom. Part 1 is fully self-contained (synthetic data is gener
 - **U-Net:** trained for 15 epochs on a synthetic shapes dataset, tracked via IoU and Dice score on a held-out validation split, with side-by-side qualitative predictions.
 - **YOLOv8n:** fine-tuned for 3 epochs on `coco8.yaml`, with loss/mAP curves parsed from Ultralytics' `results.csv`, followed by inference on real traffic footage with annotated bounding-box visualizations.
 
-## License
-
-This project is released under the [MIT License](LICENSE).
